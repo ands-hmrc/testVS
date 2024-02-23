@@ -1,0 +1,161 @@
+1.0.0.0 (Released) (Mandatory) (First Release)
+------------------------------------------------
+× Seeding
+× Add env detect to mailer - output message to console in development; mail in production
+× Disputes
+× Dispute Result override
+× reviewable partial
+× Index with filters:
+× Result Checkboxes; Assessor (search user); Date on SubmittedAt; 
+× TEST: Add reviews for another project - check filter output
+× New Reviewable search user - rmv name fields (id's only)
+× Delete Review (Admin)
+× See Review.Show Status (listing 3 items!); Review.Show Reviewable banner
+× Review Show (full) project view - check fields
+× Review partial - Index & Home page
+× Capture ReviewAssignmentId when available for stored proc (vm ReviewItem property only?)
+× Review Feedback button visibility - revert to user permissions
+× Check on existing draft in new review (sel/desel)
+× Index now resets the view when navigating back
+× Added new Index columns for Analyst & PID
+× Added new Index filters: 
+	Review type (radio selection),
+	Analyst (name search)	
+	Analyst Site (radio selection)
+	Assessor
+× Add results summary to Index header
+× Made searching the default option in Rejections/PC Reviews/Delivery Reviews
+× Decluttered filters by rendering under collapsable headings (view/collapses filter on heading toggle)
+× Made first 2 Q's in review depend on review type (ie full/partial & risk category)
+× Removed ESIP question from Deselections - modified responses to Red only for PC Q
+× Added caseflow ref to Review Index items (former likely not visible with current test data lacking CF Ids!)
+× Added refresh button/command to Review Index
+× Added badge to choose selection/deselection items where a draft has already been created (such items can no longer be be used to start a new sel/desel review from SIP mgr)
+× Improvements to all search UI objects (eg Project/Analysts etc)
+× Made radio button controls behave like search component IRO selections hiding choices with clear selection reenabling choices
+× Radio Button choices - added optional name for label (built in)
+× Made Apply filter button positon fixed (always visible at bottom of filter panel)
+× Added clear & refresh icons - for clear inputs options thoughout app and refresh index respectively
+× Modified RAG indicator colours throughout the application (Amber is now lighter!)
+× Fixed Assessor filter
+× Review index summary volumes now reflect any selected filters 
+× Fixed issue whereby double clicking the review index without a review being selected displayed a QA detail panel without data (cause of overlap previously seen)
+× Misc Home screen layout tweaks
+× Added ability for App owner to edit submitted reviews
+× Modified Home screens 'Created by You' section to only include drafts and any Completed (ie submitted) reviews with a dispute raised. New badge added to reflect reviews where a dispute has been raised
+× QA answers now reflect partial reviews (NA available on specific Q's when partial)
+× Added Caseworker search to New Delivery & New PC Review - removed Project coordinator
+× Questions now wrap correctly in New Review
+× Consolidated all startup checks (info prompt with exit on Ok):
+	Account error (proxy for connectivity)
+	App version (checks db for validity of client)
+	App installation (checks if potential execution from zip file)
+× Corrected project/case panel in view Review for rejections
+× Added new filters for Review Category & Full/Partial & Dispute raised
+× Added QALead user role
+× White RAG indicator for N/A changed to Grey
+× Removed note re testing from email body text 
+× Changes to questions (Manager review - oneNote cleansed & security breach)
+× Changed permissions so that DeliveryAssessors cant add Selections/Deselections
+× Added ability for QALead to edit/delete submitted reviews
+× Changed dispute panel to only render for reviews assessor/analyst plus QALead, Admin
+× Changed dispute edit permissions to only QALead, Admin (not the assessor as previous)
+
+
+1.0.0.1 (Released) (Hotfix)
+------------------------------------------------
+× Decreased default window size
+× Fixed issue where a rejection without case selection was deamed valid in certain circumstances
+
+
+1.1.0.0 (Released) (Mandatory)
+------------------------------------------------
+× Added version notes panel (this dialogue)
+× Improved layout of QA Outcome questions (form and show views) - particularly for small window/screen sizes
+× Added timeline to review show screen
+× Made window size scale dynamically to users display if smaller than the default window size (960p)
+× Modified mailer to ensure managers are CC'd into sent outgoing emails
+× Added 'How to get QA2' footer to outgoing emails (ie link to QA2 SharePoint site)
+× Made Quick links sections render by exception
+× Added Excel data download (accessible to admins only)
+× Numerous layout/functionality changes to index page including indication of selected filters & remove all filters option
+× Numerous layout related changes in view Review & rendering of previously missing information
+× Renamed some home screen Quick links sections to clarify intent
+× Added ability for QA leads to respond to Analyst feedback
+× Added Manager & PC user roles with relevant permission invoked for new related QA Reviews
+× Added ability to add retrospective reviews (Manager's review, selections/deselections)
+× Reconfigured user new/edit screen and corresponding actions
+× Readded user search to user admin screen
+
+
+1.1.0.1 (Released) (Hotfix)
+------------------------------------------------
+× Added QA type to outgoing emails
+× Made maximised default window state
+× Added check for email issue to counter specific edge case
+
+
+1.1.0.2 (Released: 14/12) (Hotfix) (MI section finalised)
+------------------------------------------------
+× Added splash screen
+× Fixed issue with window minimise
+× Added new summary charts/details to Charts page (question results/projects)
+× Added performance improvements (result caching, changes to asyncronous data handling)
+× Added active filter indicators to MI page
+× Added dialogue to MI page when filtered results are returned empty
+× Modified various single selection filters to multiple selection filters
+× Added screen message to various checkbox selections to make users aware that nil selections are ignored by filters
+× Modified checkbox selections where no selection is present to default to the full list rather than the list default
+× Fixed pie chart issue where results conisting of single category data does not render expected full pie/doughnut segment
+× Fixed pie chart issue where segments occluded labels for certain series values
+× Modified QA results pie chart to render rates and volumes
+× Filter selections - Select All command
+× Add PID to sort in projects
+× Selected MI Q returns projects which contribute
+× Selected Project returns locations, results, types
+× Spinners
+× Additional chart: Pass Rate & Volume Distrubution over locations 
+× Additional chart: Pass Rate & Volume Distrubution over review type
+
+
+1.1.0.3 (Planned Release) (Mandatory - mid December)
+------------------------------------------------
+
+
+1.1.0.3 (Changes)
+------------------------------------------------
+User Admin (new framework)
+Roles overhaul
+Notify implementation
+Sort for users & reviews index
+Chart/Index filter - Assessors (similar to team... tie in location?)
+Result in email
+Time ago wording in Review default index - encountered: 'NO days ago'!
+Add delete to assessors drafts - in show or home index card (or both)?
+Delete current users draft in Home
+User Index Sort options
+Delete Confirm!!!! still not added... 
+Home index/quick links styling (these still look like v.0.9!)
+General for any list using db for result eg SIP Manager review assignment... add refresh results functionality
+Services messaging handler
+Add Notification & Dialogue to Delete Review
+Db provider change - FastP > AWS - changes + performance improvements
+
+1.1.0.7 (To do)
+------------------------------------------------
+New request for PC reviews
+Do something better with empty Q's created when review doesnt contain any answers
+Filter out dormant users in user search for Reviews (retain for filters presumably - add marker to denote old user in results)
+Create gaps in role permission values (eg HasDeveloperTools = 2^100) to allow new permissions to be added without redrawing all inherant roles derived from these values and negating the need to update all users impacted.
+
+
+
+1.x.0.0 (Medium Plan)
+------------------------------------------------
+Logging (added but needs checks on log file size - ie overwrite policy)
+Checkout HasMany where foreign keys used for several navigational properties (wrt HasStaff...potentially fixed following new annotations for HasMany/BelongsTo.. check!)
+Draw on PPA to include Directorate/sub orgs/etc info (maybe)
+Dark Mode/Contrast Mode Themes (maybe)
+Search Component - house all data activity in vm; allow optional selected result style (or leverage search result style based on model name **with defaults defined**)
+Tidy up developer screen (modify the ability to set versions in db/client - warning dialogue etc)
+Move all VM to new framework w/ EF
